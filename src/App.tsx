@@ -1,10 +1,14 @@
-import { Counter } from "./component/Counter";
+import { Button } from "./shared/ui/Button/Button";
 
 const App = () => {
     return (
-        <div className="app">
-            dofsjvmsdkvmfczsdlv
-            <Counter />
+        <div>
+            <Button variant="secondary">
+                Button
+            </Button>
+            <Button>
+                Button
+            </Button>
         </div>
     );
 };

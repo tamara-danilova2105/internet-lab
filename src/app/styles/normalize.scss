@@ -1,11 +1,15 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 li {
     list-style-type: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 input,
@@ -16,14 +20,7 @@ select {
     font: inherit;
 }
 
-a {
-    text-decoration: none;
-}
-
 button {
     cursor: pointer;
-}
-
-.app {
-    font-size: 30px;
+    border: none;
 }
