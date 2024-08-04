@@ -1,14 +1,9 @@
-import { Button } from "./shared/ui/Button/Button";
+import { Input } from "./shared/ui/Input/Input";
 
 const App = () => {
     return (
         <div>
-            <Button variant="secondary">
-                Button
-            </Button>
-            <Button>
-                Button
-            </Button>
+            <Input label='Text' helperText='helper text' />
         </div>
     );
 };
