@@ -3,5 +3,10 @@ declare module '*.scss' {
         [className: string]: string
     }
     const className: IClassNames;
-    export = className;
+    export default className;
+}
+
+declare module '*.png' {
+    const value: string;
+    export default value;
 }
