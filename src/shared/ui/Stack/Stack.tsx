@@ -51,9 +51,9 @@ export const Stack = (props: FlexProps) => {
     const {
         className,
         children,
-        direction = 'row',
-        justify = 'start',
-        align = 'center',
+        direction,
+        justify,
+        align,
         gap,
         max,
         tag = 'div',

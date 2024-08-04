@@ -1,3 +1,3 @@
-import { Navbar } from './ui/Navbar';
+import { NavbarDesktop } from './ui/NavbarDesktop/NavbarDesktop';
 
-export { Navbar }
+export { NavbarDesktop }
