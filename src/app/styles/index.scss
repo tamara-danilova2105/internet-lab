@@ -1,3 +1,7 @@
 @import "./normalize";
 @import "./vars";
 @import './media-queries';
+
+body {
+    font-family: var(--font-family);
+}

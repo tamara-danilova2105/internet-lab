@@ -5,9 +5,9 @@ import styles from './HowItWorks.module.scss';
 
 export const HowItWorks = () => {
     return (
-        <section className={styles.section} >
+        <section className={styles.section}>
             <h2 className={styles.title}>Как это работает</h2>
-            <Stack justify='between'>
+            <Stack justify='between' max>
                 {data.map((el, index) => 
                     <HowItWorksItem 
                         key={index} 
