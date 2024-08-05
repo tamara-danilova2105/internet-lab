@@ -5,7 +5,7 @@ import { Additional, classNames } from "@/shared/lib/classNames/classNames";
 export type TextTag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'li';
 export type TextSize = 's' | 'm' | 'l' | 'xl';
 export type TextWeight = 'normal' | 'bold';
-export type TextColor = 'black' | 'darkGrey'
+export type TextColor = 'black' | 'darkGrey' | 'white';
 
 interface TextProps {
     className?: string;

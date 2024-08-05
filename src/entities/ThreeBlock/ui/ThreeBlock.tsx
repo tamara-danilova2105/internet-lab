@@ -1,6 +1,6 @@
 import { Stack } from "@/shared/ui/Stack/Stack";
-import background from "../../../shared/assets/images/back.png";
-import threeBlock from "../../../shared/assets/images/three_block.png";
+import background from "@/shared/assets/images/back.png";
+import threeBlock from "@/shared/assets/images/three_block.png";
 import styles from './ThreeBlock.module.scss';
 import { Text } from "@/shared/ui/Text/Text";
 
