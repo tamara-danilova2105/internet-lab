@@ -1,6 +1,7 @@
-import { Stack } from "../../../../shared/ui/Stack/Stack";
+import { Text } from "@/shared/ui/Text/Text";
 import { IHowItWorksItem } from "../../lib/data";
 import styles from './HowItWorksItem.module.scss';
+import { Stack } from "@/shared/ui/Stack/Stack";
 
 export const HowItWorksItem = ({icon, title, text}: IHowItWorksItem) => {
     return (
@@ -10,8 +11,8 @@ export const HowItWorksItem = ({icon, title, text}: IHowItWorksItem) => {
             gap="8"
         >
             {icon}
-            <h4 className={styles.title}>{title}</h4>
-            <p className={styles.text}>{text}</p>
+            <Text size="l" weight='bold'>{title}</Text>
+            <Text size='m' color='darkGrey'>{text}</Text>
         </Stack>
     );
 };

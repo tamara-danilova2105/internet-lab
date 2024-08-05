@@ -1,0 +1,51 @@
+$headline-one: var(--headline-one);
+$headline-two: var(--headline-two);
+$headline-three: var(--headline-three);
+$headline-four: var(--headline-four);
+$headline-five: var(--headline-five);
+$headline-six: var(--headline-six);
+
+$font-size-s: var(--font-size-s);
+$font-size-m: var(--font-size-m);
+$font-size-l: var(--font-size-l);
+$font-size-xl: var(--font-size-xl);
+
+$headers: (
+    h1: $headline-one,
+    h2: $headline-two,
+    h3: $headline-three,
+    h4: $headline-four,
+    h5: $headline-five,
+    h6: $headline-six,
+);
+
+@each $header, $size in $headers {
+    #{$header} {
+        font-size: $size;
+    }
+};
+
+$pars: (
+    s: $font-size-s,
+    m: $font-size-m,
+    l: $font-size-l,
+    xl: $font-size-xl,
+);
+
+@each $par, $size in $pars {
+    .#{$par} {
+        font-size: $size;
+    }
+};
+
+.bold {
+    font-weight: bold;
+}
+
+.black {
+    color: var(--black-color);
+}
+
+.darkGrey {
+    color: var(--dark-gray-color);
+}

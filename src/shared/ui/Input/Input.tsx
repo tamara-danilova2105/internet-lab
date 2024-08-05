@@ -1,4 +1,4 @@
-import { ChangeEvent, InputHTMLAttributes, useState } from 'react';
+import { ChangeEvent, InputHTMLAttributes, memo, useState } from 'react';
 import styles from './Input.module.scss';
 import { classNames, Mods } from '../../lib/classNames/classNames';
 
@@ -16,7 +16,7 @@ interface InputProps extends HTMLInputProps {
     onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const Input = (props: InputProps) => {
+export const Input = memo((props: InputProps) => {
     const { 
         className, 
         defaultValue = '', 
@@ -51,4 +51,4 @@ export const Input = (props: InputProps) => {
             <span className={styles.helper_text}>{helperText}</span>
         </div>
     );
-};
+});
