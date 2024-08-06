@@ -1,3 +1,5 @@
+@import '@/app/styles/media-queries.scss';
+
 .hero {
     position: relative;
     width: 100%;
@@ -26,9 +28,21 @@
     position: absolute;
     z-index: 1;
     width: 750px;
-    top: 200px;
-    left: 360px;
+    top: 250px;
+    left: 550px;
     text-align: center;
+
+    @include desktop {
+        left: 450px;
+    }
+
+    @include desktop-l {
+        left: 350px;
+    }
+
+    @include desktop-m {
+        left: 300px;
+    }
 }
 
 .header {

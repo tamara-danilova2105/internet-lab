@@ -16,11 +16,11 @@ export const ThreeBlock = () => {
                 <Text tag="h3">
                     Круто, ты дошел до третьего блока
                 </Text>
-                <Text color='darkGrey' size='l'>
+                <Text className={styles.text} color='darkGrey' size='l'>
                     63% опрошенных пользовались кредитами из-за того, что не могли покрыть
                     непредвиденные расходы свыше 15 000 Р.
                 </Text>
-                <Text color='darkGrey' size='l'>
+                <Text className={styles.text}  color='darkGrey' size='l'>
                     Доступ к заработанным деньгам помогает отказаться от кредитов и
                     экономить деньги на процентах и штрафах.
                 </Text>

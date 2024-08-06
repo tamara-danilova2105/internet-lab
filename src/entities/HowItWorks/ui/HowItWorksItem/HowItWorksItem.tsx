@@ -11,8 +11,8 @@ export const HowItWorksItem = ({icon, title, text}: IHowItWorksItem) => {
             gap="8"
         >
             {icon}
-            <Text size="l" weight='bold'>{title}</Text>
-            <Text size='m' color='darkGrey'>{text}</Text>
+            <Text className={styles.text} size="l" weight='bold'>{title}</Text>
+            <Text className={styles.text} size='m' color='darkGrey'>{text}</Text>
         </Stack>
     );
 };
