@@ -13,7 +13,7 @@ export const ThreeBlock = () => {
                 justify='center'
                 className={styles.text_block}
             >
-                <Text tag="h3">
+                <Text className={styles.title} tag="h3">
                     Круто, ты дошел до третьего блока
                 </Text>
                 <Text className={styles.text} color='darkGrey' size='l'>

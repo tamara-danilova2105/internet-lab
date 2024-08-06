@@ -1,5 +1,14 @@
+@import '@/app/styles/media-queries.scss';
+
 .main {
     width: 280px;
+
+    @include tablet-l {
+        width: 342px;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 16px;
+    }
 }
 
 .text {

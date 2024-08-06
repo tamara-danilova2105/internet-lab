@@ -1,3 +1,5 @@
+@import '@/app/styles/media-queries.scss';
+
 .section {
     width: 1008px;
     display: flex;
@@ -5,4 +7,12 @@
     align-items: center;
     margin: auto;
     gap: 48px;
+
+    @include tablet-l {
+        width: 727px;
+    }
+
+    @include mobile-l {
+        width: 342px;
+    }
 }

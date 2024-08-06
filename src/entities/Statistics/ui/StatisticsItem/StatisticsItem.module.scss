@@ -1,5 +1,11 @@
+@import '@/app/styles/media-queries.scss';
+
 .main {
     width: 592px;
+
+    @include tablet-l {
+        width: 100%;
+    }
 }
 
 .text {

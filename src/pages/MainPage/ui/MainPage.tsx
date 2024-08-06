@@ -5,6 +5,7 @@ import { HowItWorks } from "@/entities/HowItWorks";
 import { FAQ } from "@/entities/FAQ";
 import { Statistics } from "@/entities/Statistics";
 import { Form } from "@/feature/Form";
+import { Carousel } from "@/entities/Carousel";
 
 const MainPage = () => {
     return (
@@ -12,6 +13,7 @@ const MainPage = () => {
             <Hero />
             <HowItWorks />
             <ThreeBlock />
+            <Carousel />
             <FAQ />
             <Statistics />
             <Form />

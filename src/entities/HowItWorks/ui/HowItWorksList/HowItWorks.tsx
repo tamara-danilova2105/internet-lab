@@ -7,10 +7,10 @@ import { Stack } from "@/shared/ui/Stack/Stack";
 export const HowItWorks = () => {
     return (
         <section className={styles.section}>
-            <Text tag='h2'>
+            <Text className={styles.title} tag='h2'>
                 Как это работает
             </Text>
-            <Stack justify='between' max>
+            <Stack className={styles.container} justify='between' max>
                 {data.map((el, index) => 
                     <HowItWorksItem 
                         key={index} 
