@@ -47,7 +47,7 @@ export const Input = memo((props: InputProps) => {
                 onChange={handlerInput}
                 {...otherProps}
             />
-            <label className={styles.label}>Label</label>
+            <label className={styles.label}>{label}</label>
             <span className={styles.helper_text}>{helperText}</span>
         </div>
     );
