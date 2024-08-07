@@ -1,10 +1,65 @@
 .section {
     background: var(--extralight-gray-color);
     padding: 40px 0;
-}
+    // position: relative;
+};
 
-.reviews {
+.main {
     width: 1280px;
     margin: auto;
-    overflow: hidden;
 }
+
+.carousel {
+    display: flex;
+    align-items: center;
+};
+
+.reviews_container {
+    overflow: hidden;
+    width: 1023px;
+    margin: auto;
+};
+
+.reviews {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+};
+
+.btn {
+    margin-top: 60px;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 3px;
+    user-select: none;
+    background-color: inherit;
+    z-index: 1;
+};
+
+.pagination {
+    text-align: center;
+    padding: 10px 0;
+
+    span {
+        cursor: pointer;
+        width: 8px;
+        height: 8px;
+        margin: 0 2px;
+        background-color: var(--mid-gray-color);
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+
+        &:hover {
+            background-color: var(--primary-hover-color);
+        }
+    };
+
+    .active {
+        background-color: var(--primary-color);
+    };
+};
