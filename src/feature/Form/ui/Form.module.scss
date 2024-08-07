@@ -30,7 +30,7 @@
 .confirm {
     width: 384px;
     font-size: var(--font-size-l);
-    
+
     @include mobile-l {
         width: 100%;
     }
@@ -54,6 +54,7 @@
 };
 
 .submit_container {
+    margin-top: 10px;
     @include mobile-l {
         gap: 16px;
     }

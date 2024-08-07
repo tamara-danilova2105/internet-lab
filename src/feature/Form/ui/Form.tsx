@@ -2,28 +2,52 @@ import { Text } from "@/shared/ui/Text/Text";
 import { Input } from "@/shared/ui/Input/Input";
 import { Stack } from "@/shared/ui/Stack/Stack";
 import { Button } from "@/shared/ui/Button/Button";
-import styles from './Form.module.scss';
 import { ChangeEvent, FormEvent, useCallback, useState } from "react";
 import { useAppDispatch, useAppSelector } from "@/app/providers/store/hooks";
 import { Form as IForm, getDataForm, setDataForm } from "../model/slice";
+import styles from './Form.module.scss';
 
 export const Form = () => {
 
     const dataForm = useAppSelector(getDataForm);
+    
     const dispatch = useAppDispatch();
     const [isError, setIsError] = useState({
         username: false,
         phone: false,
-    })
+    });
 
     const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         dispatch(setDataForm({ name: name as keyof IForm, value }))
     }, [dispatch]);
 
-    const submitForm = (e: FormEvent<HTMLFormElement>) => {
+    const submitForm = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const isValid = Object.values(dataForm).every(value => value !== '');       
+        const isValid = Object.values(dataForm).every(value => value !== ''); 
+        
+        if (!isValid) {           
+            Object.entries(dataForm).map(([key, value]) => {
+                if (value === '') setIsError(prev => ({ ...prev, [key]: true}));
+            });
+            
+            return
+        }
+        
+        const response = await fetch('endpoit-submit-form', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(dataForm)
+        })
+
+        if(response.ok) {
+            console.log('форма отправлена');           
+        } else {
+            console.log('произошла ошибка');        
+        }        
     }
 
     return (
