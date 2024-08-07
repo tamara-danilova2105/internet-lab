@@ -18,7 +18,8 @@
     };
 };
 
-.input {
+.input,
+.btn {
     width: 384px;
 
     @include mobile-l {
@@ -26,13 +27,13 @@
     }
 };
 
-.btn {
-    width: 384px;
-};
-
 .confirm {
     width: 384px;
     font-size: var(--font-size-l);
+    
+    @include mobile-l {
+        width: 100%;
+    }
 };
 
 .checkbox {
