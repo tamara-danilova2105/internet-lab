@@ -13,4 +13,9 @@
 
 .text {
     line-height: 24px;
+
+    @include mobile-l {
+        font-size: var(--font-size-m);
+        width: 80%
+    }
 };

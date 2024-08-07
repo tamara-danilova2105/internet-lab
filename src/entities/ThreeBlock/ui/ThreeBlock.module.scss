@@ -24,6 +24,10 @@
     @include tablet-l {
         width: 350px;
     };
+
+    @include mobile-m {
+        width: 288px;
+    }
 };
 
 .title {
@@ -45,6 +49,10 @@
             width: 342px;
             bottom: 10px;
         };
+
+        @include mobile-m {
+            width: 288px;
+        }
     };
 };
 

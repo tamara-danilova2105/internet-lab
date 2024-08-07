@@ -16,6 +16,10 @@
     @include mobile-l {
         width: 342px;
     };
+
+    @include mobile-m {
+        width: 288px;
+    }
 };
 
 .title {
