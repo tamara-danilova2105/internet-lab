@@ -3,7 +3,7 @@
     font-size: 20px;
     border-radius: var(--border-radius-s);
     font-weight: 600;
-}
+};
 
 .accent {
     background: var(--primary-color);
@@ -11,8 +11,8 @@
 
     &:hover {
         background: var(--primary-hover-color);
-    }
-}
+    };
+};
 
 .secondary {
     background: var(--light-gray-color);
@@ -22,5 +22,5 @@
     &:hover {
         background: var(--white-color);
         border-color: var(--mid-gray-color);
-    }
-}
+    };
+};
