@@ -32,7 +32,7 @@
     font-size: var(--font-size-l);
 
     @include mobile-l {
-        width: 100%;
+        width: 280px;
     }
 };
 
@@ -49,15 +49,13 @@
 .input_container,
 .submit_container {
     @include mobile-l {
-        flex-direction: column
+        flex-direction: column;
+        gap: 16px;
     }
 };
 
 .submit_container {
     margin-top: 10px;
-    @include mobile-l {
-        gap: 16px;
-    }
 }
 
 
