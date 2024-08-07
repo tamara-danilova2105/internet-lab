@@ -12,6 +12,8 @@ const REVIEWS_CONTAINER_WIDTH = SLIDE_WIDTH * reviews.length;
 
 export const Carousel = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
+    console.log(currentSlide, TOTAL_SLIDES);
+    
 
     const nextSlide = () => {
         if (currentSlide < TOTAL_SLIDES - 1) {
@@ -37,7 +39,7 @@ export const Carousel = () => {
                 align='center'
             >
                 <button 
-                    className={styles.btn} 
+                    className={`${styles.btn} ${currentSlide === 0 && styles.disabled_btn}`} 
                     onClick={prevSlide}
                 >
                     {arrowPrevIcon()}
@@ -53,7 +55,7 @@ export const Carousel = () => {
                     </Stack>
                 </div>
                 <button 
-                    className={styles.btn} 
+                    className={`${styles.btn} ${currentSlide === (TOTAL_SLIDES - 1) && styles.disabled_btn}`} 
                     onClick={nextSlide}
                 >
                     {arrowNextIcon()}
