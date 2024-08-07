@@ -48,7 +48,7 @@ export const Input = memo((props: InputProps) => {
                 {...otherProps}
             />
             <label className={styles.label}>{label}</label>
-            <span className={styles.helper_text}>{helperText}</span>
+            { isError && <span className={styles.helper_text}>{helperText}</span> }
         </div>
     );
 });
