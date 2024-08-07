@@ -1,35 +1,34 @@
 @import '@/app/styles/media-queries.scss';
+@import '@/app/styles/mixin.scss';
 
 .section {
-    width: 1280px;
+    @include section-styles;
     height: 450px;
     display: flex;
-    margin: auto;
     gap: 80px;
 
     @include tablet-l {
-        width: 730px;
         height: 265px;
         gap: 20px;
-    }
+    };
 
     @include mobile-l {
-        width: 342px;
         flex-direction: column-reverse;
-    }
-}
+        height: 509px;        
+    };
+};
 
 .text_block {
     width: 600px;
 
     @include tablet-l {
         width: 350px;
-    }
-}
+    };
+};
 
 .title {
     font-size: var(--headline-five);
-}
+};
 
 .image_block {
     position: relative;
@@ -40,14 +39,15 @@
         
         @include tablet-l {
             width: 350px;
-        }
+        };
 
         @include mobile-l {
             width: 342px;
-        }
-    }
-}
+            bottom: 10px;
+        };
+    };
+};
 
 .text {
     line-height: 28px;
-}
+};

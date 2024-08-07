@@ -1,8 +1,12 @@
+import user1 from '@/shared/assets/images/user1.png';
+import user2 from '@/shared/assets/images/user2.png';
+
 export interface Reviews {
     username: string;
     city: string;
     review: string;
     id: string;
+    avatar?: string;
 };
 
 export const reviews: Reviews[] = [
@@ -17,12 +21,14 @@ export const reviews: Reviews[] = [
         city: 'Санкт-Петербург',
         review: 'Каждый из нас понимает очевидную вещь: перспективное планирование предоставляет широкие возможности для анализа существующих паттернов поведения. В своём стремлении улучшить пользовательский опыт мы упускаем, что активно развивающиеся страны третьего мира призваны к ответу.',
         id: '2',
+        avatar: user2,
     },
     {
         username: 'Артем Корнилов',
         city: 'Самара',
         review: 'Каждый из нас понимает очевидную вещь: перспективное планирование предоставляет широкие возможности для анализа существующих паттернов поведения.',
         id: '3',
+        avatar: user1,
     },
     {
         username: 'Тамара Данилова',

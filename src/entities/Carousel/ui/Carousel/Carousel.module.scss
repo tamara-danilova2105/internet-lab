@@ -1,12 +1,14 @@
+@import '@/app/styles/media-queries.scss';
+@import '@/app/styles/mixin.scss';
+
 .section {
     background: var(--extralight-gray-color);
     padding: 40px 0;
 };
 
 .main {
-    width: 1280px;
-    margin: auto;
-}
+    @include section-styles;
+};
 
 .carousel {
     display: flex;
@@ -17,6 +19,14 @@
     overflow: hidden;
     width: 1023px;
     margin: auto;
+
+    @include tablet-l {
+        width: calc(341px * 2);
+    };
+
+    @include mobile-l {
+        width: 341px;
+    }
 };
 
 .reviews {
@@ -31,7 +41,11 @@
 
     svg path {
         fill: var(--primary-color)
-    }
+    };
+
+    @include tablet-l {
+        display: none;
+    };
 };
 
 .disabled_btn {
@@ -40,7 +54,7 @@
     svg path {
         fill: var(--mid-gray-color)
     }
-}
+};
 
 .pagination {
     text-align: center;

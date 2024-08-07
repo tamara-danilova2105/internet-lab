@@ -1,0 +1,92 @@
+@import '@/app/styles/media-queries.scss';
+
+.navbar_mobile {
+    display: none;
+
+    @include tablet-l {
+        display: block;
+    };
+};
+
+.hamburger {
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    transition: all .25s;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    z-index: 3;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+};
+
+.hamburger:hover {
+    border: none;
+};
+
+.lineTop,
+.lineBottom {
+    position: absolute;
+    width: 35px;
+    height: 3px;
+    top: 0;
+    right: 15px;
+    background-color: var(--white-color);
+    transform: rotate(0);
+    transition: all .5s;
+};
+
+.lineBottom {
+    transform: translateY(14px);
+    margin-top: 2px;
+};
+
+.open .hamburger {
+    position: absolute;
+};
+
+.open .lineTop {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+    background-color: var(--black-color);
+};
+
+.open .lineBottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+    margin-top: 0;
+    background-color: var(--black-color);
+};
+
+.menu {
+    list-style: none;
+    background-color: var(--white-color);
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    transition: top 0.5s ease-in-out;
+
+    &.menuOpen {
+        top: 0;
+    }
+};
+
+.link {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+    width: 100%;
+    border: 1px solid var(--light-gray-color);
+    color: var(--gray-color);
+    font-size: var(--font-size-xl);
+};
+
+.logo {
+    margin: 35px 20px;
+}

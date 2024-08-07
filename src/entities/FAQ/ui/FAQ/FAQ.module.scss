@@ -1,4 +1,5 @@
 @import '@/app/styles/media-queries.scss';
+@import '@/app/styles/mixin.scss';
 
 .section {
     width: 1008px;
@@ -10,9 +11,15 @@
 
     @include tablet-l {
         width: 727px;
-    }
+    };
 
     @include mobile-l {
         width: 342px;
+    };
+};
+
+.title {
+    @include mobile-l {
+        font-size: var(--headline-four);
     }
 }

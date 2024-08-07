@@ -4,8 +4,13 @@ import { Accordion } from '../Accordion/Accordion';
 
 export const FAQ = () => {
     return (
-        <section className={styles.section}>
-            <Text tag='h2'>Вопросы и ответы</Text>
+        <section
+            id='faq'
+            className={styles.section}
+        >
+            <Text className={styles.title} tag='h2'>
+                Вопросы и ответы
+            </Text>
             <Accordion />
         </section>
     );

@@ -3,7 +3,7 @@ import styles from './Hero.module.scss';
 import { Text } from '@/shared/ui/Text/Text';
 import heroDesktop from '@/shared/assets/images/hero.png';
 import heroTablet from '@/shared/assets/images/hero_tablet.png';
-import { NavbarDesktop } from '@/feature/Navbar';
+import { NavbarDesktop, NavbarMobile } from '@/feature/Navbar';
 import { Stack } from '@/shared/ui/Stack/Stack';
 
 export const Hero = () => {
@@ -19,6 +19,7 @@ export const Hero = () => {
             </picture>
             <div className={styles.header}>
                 <NavbarDesktop />
+                <NavbarMobile />
             </div>
             <div className={styles.overlay} />
             <div className={styles.content_container}>
@@ -28,10 +29,10 @@ export const Hero = () => {
                     className={styles.content}
                     gap='32'
                 >
-                    <Text tag='h1' color='white'>
+                    <Text className={styles.title} tag='h1' color='white'>
                         Говорят, никогда не поздно сменить профессию
                     </Text>
-                    <Text size='xl' color='white'>
+                    <Text className={styles.text} size='xl' color='white'>
                         Сделай крутое тестовое задание и у тебя получится
                     </Text>
                     <Button variant='secondary' className={styles.hero_btn}>

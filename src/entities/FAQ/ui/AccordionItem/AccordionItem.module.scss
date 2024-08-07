@@ -1,6 +1,8 @@
+@import '@/app/styles/media-queries.scss';
+
 .li {
     width: 100%;
-}
+};
 
 .btn {
     width: 100%;
@@ -21,11 +23,21 @@
         svg {
             path {
                 fill: var(--primary-color);
-            }
+            };
             circle {
                 stroke: var(--primary-color);
-            }
-        }
+            };
+        };
+    };
+
+    @include mobile-l {
+        height: 100px
+    }
+};
+
+.question {
+    @include mobile-l {
+        width: 88%;
     }
 }
 
@@ -35,4 +47,4 @@
     line-height: 32px;
     width: 90%;
     padding: 0 0 25px 0;
-}
+};

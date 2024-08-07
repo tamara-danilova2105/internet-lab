@@ -1,19 +1,37 @@
+import { useEffect, useState } from 'react';
 import { Stack } from '@/shared/ui/Stack/Stack';
 import { reviews } from '../../lib/data';
 import { CarouselItem } from '../CarouselItem/CarouselItem';
-import { useState } from 'react';
-import styles from './Carousel.module.scss';
 import { arrowNextIcon, arrowPrevIcon } from '@/shared/assets/svg/arrowIcons';
+import styles from './Carousel.module.scss';
 
 const SLIDE_WIDTH = 341;
 const SLIDERS_TO_SHOW = 3;
-const TOTAL_SLIDES = Math.ceil(reviews.length / SLIDERS_TO_SHOW);
-const REVIEWS_CONTAINER_WIDTH = SLIDE_WIDTH * reviews.length;
+
 
 export const Carousel = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
-    console.log(currentSlide, TOTAL_SLIDES);
-    
+    const [slidersToShow, setSlidersToShow] = useState(3);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 590) {
+                setSlidersToShow(1);
+            } else if (window.innerWidth <= 1024) {
+                setSlidersToShow(2);
+            } else {
+                setSlidersToShow(3);
+            }
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const TOTAL_SLIDES = Math.ceil(reviews.length / slidersToShow);
+    const REVIEWS_CONTAINER_WIDTH = SLIDE_WIDTH * reviews.length;
 
     const nextSlide = () => {
         if (currentSlide < TOTAL_SLIDES - 1) {
@@ -28,34 +46,34 @@ export const Carousel = () => {
     };
 
     const stylesReviews = {
-        transform: `translateX(-${currentSlide * SLIDE_WIDTH * SLIDERS_TO_SHOW}px)`,
+        transform: `translateX(-${currentSlide * SLIDE_WIDTH * slidersToShow}px)`,
         width: `${REVIEWS_CONTAINER_WIDTH}px`
     };
 
     return (
         <section className={styles.section}>
-            <Stack 
-                className={styles.main} 
+            <Stack
+                className={styles.main}
                 align='center'
             >
-                <button 
-                    className={`${styles.btn} ${currentSlide === 0 && styles.disabled_btn}`} 
+                <button
+                    className={`${styles.btn} ${currentSlide === 0 && styles.disabled_btn}`}
                     onClick={prevSlide}
                 >
                     {arrowPrevIcon()}
                 </button>
                 <div className={styles.reviews_container}>
-                    <Stack 
-                        className={styles.reviews} gap='16' 
+                    <Stack
+                        className={styles.reviews} gap='16'
                         style={stylesReviews}
                     >
-                        {reviews.map(el => 
+                        {reviews.map(el =>
                             <CarouselItem key={el.id} element={el} />
                         )}
                     </Stack>
                 </div>
-                <button 
-                    className={`${styles.btn} ${currentSlide === (TOTAL_SLIDES - 1) && styles.disabled_btn}`} 
+                <button
+                    className={`${styles.btn} ${currentSlide === (TOTAL_SLIDES - 1) && styles.disabled_btn}`}
                     onClick={nextSlide}
                 >
                     {arrowNextIcon()}

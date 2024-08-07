@@ -6,7 +6,10 @@ import { Text } from "@/shared/ui/Text/Text";
 
 export const ThreeBlock = () => {
     return (
-        <section className={styles.section}>
+        <section 
+            id="three-blok" 
+            className={styles.section}
+        >
             <Stack 
                 direction='column' 
                 gap='16' 

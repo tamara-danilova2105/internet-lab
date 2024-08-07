@@ -6,9 +6,15 @@ import styles from './Form.module.scss';
 
 export const Form = () => {
     return (
-        <section className={styles.section}>
-            <Text tag='h2'>Отправь форму</Text>
-            <Stack max justify='between'>
+        <section
+            id="form"
+            className={styles.section}
+        >
+            <Text className={styles.title} tag='h2'>Отправь форму</Text>
+            <Stack
+                className={styles.input_container}
+                max justify='between'
+            >
                 <Input
                     className={styles.input}
                     label='Имя'
@@ -18,8 +24,13 @@ export const Form = () => {
                     label='Телефон'
                 />
             </Stack>
-            <Stack max justify='between' align='center'>
-                <Stack className={styles.confirm} gap="8">
+            <Stack
+                className={styles.submit_container}
+                max
+                justify='between'
+                align='center'
+            >
+                <Stack className={styles.confirm} gap="8" align='center'>
                     <input className={styles.checkbox} type='checkbox' />
                     <span>Согласен, отказываюсь</span>
                 </Stack>

@@ -1,0 +1,18 @@
+@import './media-queries';
+
+@mixin section-styles {
+    width: 1280px;
+    margin: auto;
+
+    @include tablet-l {
+        width: 727px;
+    }
+
+    @include mobile-l {
+        width: 342px;
+    }
+
+    @include mobile-m {
+        width: 288px;
+    }
+}

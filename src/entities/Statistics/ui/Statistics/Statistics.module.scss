@@ -1,21 +1,13 @@
 @import '@/app/styles/media-queries.scss';
+@import '@/app/styles/mixin.scss';
 
 .section {
     background: var(--extralight-gray-color);
     padding: 40px 0;
-}
+};
 
 .contant {
-    width: 1280px;
+    @include section-styles;
     flex-wrap: wrap;
     background: inherit;
-    margin: auto;
-
-    @include tablet-l {
-        width: 728px;
-    }
-
-    @include mobile-l {
-        width: 342px;
-    }
-}
+};

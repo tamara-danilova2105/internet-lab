@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import { MainPage } from "../../../../pages/MainPage";
+import { Footer } from "@/entities/Footer";
 
 const AppRouter = () => {
     return (
@@ -8,6 +9,7 @@ const AppRouter = () => {
             <Routes>
                 <Route path="/" element={<MainPage />} />
             </Routes>
+            <Footer />
         </Suspense>
     );
 };
