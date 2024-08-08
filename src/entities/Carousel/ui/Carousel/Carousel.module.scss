@@ -4,16 +4,16 @@
 .section {
     background: var(--extralight-gray-color);
     padding: 40px 0;
-};
+}
 
 .main {
     @include section-styles;
-};
+}
 
 .carousel {
     display: flex;
     align-items: center;
-};
+}
 
 .reviews_container {
     overflow: hidden;
@@ -22,17 +22,17 @@
 
     @include tablet-l {
         width: calc(341px * 2);
-    };
+    }
 
     @include mobile-l {
         width: 341px;
     }
-};
+}
 
 .reviews {
     display: flex;
     transition: transform 0.5s ease-in-out;
-};
+}
 
 .btn {
     padding: 16px;
@@ -46,7 +46,7 @@
     @include tablet-l {
         display: none;
     };
-};
+}
 
 .disabled_btn {
     pointer-events: none;
@@ -54,7 +54,7 @@
     svg path {
         fill: var(--mid-gray-color)
     }
-};
+}
 
 .pagination {
     text-align: center;
@@ -73,9 +73,9 @@
         &:hover {
             background-color: var(--primary-hover-color);
         }
-    };
+    }
 
     .active {
         background-color: var(--primary-color);
-    };
-};
+    }
+}

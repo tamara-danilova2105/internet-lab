@@ -11,12 +11,12 @@
 
     @include tablet-l {
         width: 728px;
-    };
+    }
 
     @include mobile-l {
         width: 342px;
-    };
-};
+    }
+}
 
 .input,
 .btn {
@@ -25,7 +25,7 @@
     @include mobile-l {
         width: 100%;
     }
-};
+}
 
 .confirm {
     width: 384px;
@@ -34,17 +34,17 @@
     @include mobile-l {
         width: 280px;
     }
-};
+}
 
 .checkbox {
     width: 24px;
     height: 24px;
     border-radius: var(--border-radius-s);
-};
+}
 
 .title {
     font-size: var(--headline-five);
-};
+}
 
 .input_container,
 .submit_container {
@@ -52,7 +52,7 @@
         flex-direction: column;
         gap: 16px;
     }
-};
+}
 
 .submit_container {
     margin-top: 10px;

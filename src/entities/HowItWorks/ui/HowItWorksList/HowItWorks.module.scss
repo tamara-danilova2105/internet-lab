@@ -7,21 +7,21 @@
     align-items: center;
     margin: auto;
     @include section-styles;
-};
+}
 
 .container {
     @include tablet-l {
         flex-wrap: wrap;
         gap: 16px;
-    };
+    }
 
     @include mobile-l {
         flex-direction: column;
-    };
-};
+    }
+}
 
 .title {
     @include mobile-l {
         font-size: var(--headline-four);
-    };
-};
+    }
+}

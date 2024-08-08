@@ -11,16 +11,16 @@
 
     @include tablet-l {
         width: 727px;
-    };
+    }
 
     @include mobile-l {
         width: 342px;
-    };
+    }
 
     @include mobile-m {
         width: 288px;
     }
-};
+}
 
 .title {
     @include mobile-l {

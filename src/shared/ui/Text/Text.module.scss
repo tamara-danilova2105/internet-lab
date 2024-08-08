@@ -23,7 +23,7 @@ $headers: (
     #{$header} {
         font-size: $size;
     }
-};
+}
 
 $pars: (
     s: $font-size-s,
@@ -36,20 +36,20 @@ $pars: (
     .#{$par} {
         font-size: $size;
     }
-};
+}
 
 .bold {
     font-weight: 600;
-};
+}
 
 .black {
     color: var(--black-color);
-};
+}
 
 .white {
     color: var(--white-color);
-};
+}
 
 .darkGrey {
     color: var(--dark-gray-color);
-};
+}

@@ -2,7 +2,7 @@
 
 .li {
     width: 100%;
-};
+}
 
 .btn {
     width: 100%;
@@ -33,7 +33,7 @@
     @include mobile-l {
         height: 100px
     }
-};
+}
 
 .question {
     @include mobile-l {
@@ -47,4 +47,4 @@
     line-height: 32px;
     width: 90%;
     padding: 0 0 25px 0;
-};
+}

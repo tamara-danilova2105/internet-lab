@@ -15,7 +15,7 @@
     @include mobile-l {
         width: 342px;
     }
-};
+}
 
 .desktop {
     @include tablet-l {
@@ -35,14 +35,14 @@
         background-color: var(--white-color);
         content: "";
         transition: width 0.3s ease-out;
-    };
+    }
 
     &:hover {
         transition: color 0.3s ease-out;
-    };
+    }
 
     &:hover:after,
     &:focus:after {
         width: 100%;
-    };
-};
+    }
+}

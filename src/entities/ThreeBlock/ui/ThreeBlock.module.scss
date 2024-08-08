@@ -10,29 +10,29 @@
     @include tablet-l {
         height: 265px;
         gap: 20px;
-    };
+    }
 
     @include mobile-l {
         flex-direction: column-reverse;
         height: 509px;        
-    };
-};
+    }
+}
 
 .text_block {
     width: 600px;
 
     @include tablet-l {
         width: 350px;
-    };
+    }
 
     @include mobile-m {
         width: 288px;
     }
-};
+}
 
 .title {
     font-size: var(--headline-five);
-};
+}
 
 .image_block {
     position: relative;
@@ -43,19 +43,19 @@
         
         @include tablet-l {
             width: 350px;
-        };
+        }
 
         @include mobile-l {
             width: 342px;
             bottom: 10px;
-        };
+        }
 
         @include mobile-m {
             width: 288px;
         }
-    };
-};
+    }
+}
 
 .text {
     line-height: 28px;
-};
+}

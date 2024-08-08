@@ -5,8 +5,8 @@
 
     @include tablet-l {
         display: block;
-    };
-};
+    }
+}
 
 .hamburger {
     cursor: pointer;
@@ -20,11 +20,11 @@
     background-color: transparent;
     border: none;
     padding: 0;
-};
+}
 
 .hamburger:hover {
     border: none;
-};
+}
 
 .lineTop,
 .lineBottom {
@@ -36,27 +36,27 @@
     background-color: var(--white-color);
     transform: rotate(0);
     transition: all .5s;
-};
+}
 
 .lineBottom {
     transform: translateY(14px);
     margin-top: 2px;
-};
+}
 
 .open .hamburger {
     position: absolute;
-};
+}
 
 .open .lineTop {
     transform: rotate(45deg) translateY(6px) translateX(6px);
     background-color: var(--black-color);
-};
+}
 
 .open .lineBottom {
     transform: rotate(-45deg) translateY(6px) translateX(-6px);
     margin-top: 0;
     background-color: var(--black-color);
-};
+}
 
 .menu {
     list-style: none;
@@ -75,7 +75,7 @@
     &.menuOpen {
         top: 0;
     }
-};
+}
 
 .link {
     display: flex;
@@ -85,7 +85,7 @@
     border: 1px solid var(--light-gray-color);
     color: var(--gray-color);
     font-size: var(--font-size-xl);
-};
+}
 
 .logo {
     margin: 35px 20px;

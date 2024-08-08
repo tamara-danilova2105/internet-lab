@@ -4,10 +4,10 @@
 .section {
     background: var(--extralight-gray-color);
     padding: 40px 0;
-};
+}
 
 .contant {
     @include section-styles;
     flex-wrap: wrap;
     background: inherit;
-};
+}
