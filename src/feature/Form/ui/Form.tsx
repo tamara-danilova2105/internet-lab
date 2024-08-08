@@ -39,8 +39,8 @@ export const Form = () => {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-              },
-              body: JSON.stringify(dataForm)
+            },
+            body: JSON.stringify(dataForm)
         })
 
         if(response.ok) {
@@ -59,7 +59,7 @@ export const Form = () => {
             <form onSubmit={submitForm}>
                 <Stack
                     className={styles.input_container}
-                    max justify='between'
+                    max justify='between' gap="16"
                 >
                     <Input
                         className={styles.input}
